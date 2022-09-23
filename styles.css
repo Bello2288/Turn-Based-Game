@@ -1,9 +1,10 @@
 body {
     background-image: url('images/forest.jpg');
+<<<<<<< HEAD
     background-image: url(https://raw.githubusercontent.com/chawthorne02/Turn-Based-Game/main/images/forest.jpg);
 }
 
 .char-img {
     height: 250px;
     width: 250px;
-}
+=======
