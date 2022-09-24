@@ -42,22 +42,3 @@ function medAttack(button) {
        
  }
 
- /* === KNIGHT BUTTON 3 */
-
- const knightBtn3 = document.querySelector('.knightButton3');
-
-
- 
- knightBtn3.addEventListener("mouseover", button => {
-	 console.log('mouse over');
-	 changeLore('Headbutt: The Knight thrusts his head forward onto the enemy, dealing 1d5 + 1 damage.');
-	 
- });
- 
- knightBtn3.addEventListener("mouseout", button => {
-	 console.log('mouse out');
-	 lorePlaceholder();
- });
-
- /* === COUNTESS MORGANA WITCH BUTTONS === */
-
