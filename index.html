@@ -16,14 +16,12 @@
             <p class="enemy-name">Countess Morgana</p>
             <p class="class-description">Witch</p>
             <img class="char-img" src="images/witch.jpg">
-            <p class="lore">Countess Morgana was exiled from the kingdom of Lordaeron after succumbing to the forces of
-                dark magic. She now reigns over the Stranglethorn forest.
-            </p>
+            <textarea style="resize: none;" id="text-value" class="witch-text-here" placeholder="Countess Morgana was exiled from the kingdom of Lordaeron after succumbing to the forces of dark magic. She now reigns over the Stranglethorn forest." disabled="disabled"></textarea>
 
-            <ul class="enemy-abilities">
-                <li>Archane<br>Barrage</li>
-                <li class="bolt">Lightning<br>Bolt</li>
-                <li>Icy<br>Touch</li>
+            <ul class="player-abilities">
+                <li><button type="button" class="witchButton1">Arcane Barrage</button></li>
+                <li><button type="button" class="witchButton2">Lightning Bolt</button></li>
+                <li><button type="button" class="witchButton3">Icy Touch</button></li>
             </ul>
         </section>
         <p class="enemy-health">
@@ -49,6 +47,7 @@
     </main>
 
     <script src="main.js"></script>
+    <script src="abilities-desc.js"></script>
 </body>
 
 </html>
