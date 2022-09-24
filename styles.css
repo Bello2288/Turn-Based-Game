@@ -6,7 +6,7 @@
 
 body {
     background-image: url('images/forest.jpg');
-    cursor: url('images/sword-edit.jpeg'), auto;
+    /* cursor: url('images/sword-edit.jpeg'), auto; */
 }
 
 .char-img {

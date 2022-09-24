@@ -27,5 +27,5 @@ function medAttack(button) {
 
     enemyCurrentHealth.innerHTML = parseInt(enemyCurrentHealth.innerHTML) - (rng(0, 20)-1);
        
-    }
+ }
 
