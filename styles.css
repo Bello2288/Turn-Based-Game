@@ -21,9 +21,10 @@ body {
     width: auto;
 }
 
-.enemy-container, .user-container {
+.enemy-container,
+.user-container {
     background-image: linear-gradient(to bottom right, rgb(102, 45, 45), rgb(38, 130, 58), rgb(102, 45, 45));
-    
+
 }
 
 .enemy-container,
@@ -44,6 +45,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: "Press Start 2P";
+    user-select: none;
 
 }
 
@@ -72,6 +74,7 @@ body {
     background-color: rgb(80, 27, 27);
     color: goldenrod;
 }
+
 .bolt {
     margin: 0 10px;
 }
@@ -85,10 +88,12 @@ body {
     padding: 0;
     margin: 10px 0;
 }
+
 .player-abilities li {
     display: inline-block;
     padding: 0;
 }
+
 .player-abilities button {
     align-items: center;
     border: 1px solid goldenrod;
@@ -122,6 +127,7 @@ body {
 .player-health {
     color: white;
 }
+
 .combat-log {
     position: absolute;
     text-align: center;
@@ -131,11 +137,13 @@ body {
     margin: 0;
     /* transform: translateY(-150px); */
 }
+
 .enemy-health {
     height: 50px;
     margin-right: 100px;
     margin-left: -50px;
-} 
+}
+
 .player-health {
     height: 50px;
     margin-left: 100px;
@@ -149,14 +157,20 @@ body {
     font-family: "Player Start 2P";
 }
 
-input[type = 'text'] {
+input[type='text'] {
     border: none;
     font-size: 18px;
     color: goldenrod;
     font-family: "Press Start 2P";
 }
 
+<<<<<<< HEAD
 =======
 
 }
 >>>>>>> fa7966b (added more css)
+=======
+button:active {
+    scale: 0.9;
+}
+>>>>>>> 0a1d4fd (adds button effects)
