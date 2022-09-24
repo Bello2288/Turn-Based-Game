@@ -12,6 +12,7 @@ body {
 .char-img {
     height: 250px;
     width: 250px;
+<<<<<<< HEAD
     border: 1px solid rgb(80, 27, 27);
 }
 
@@ -155,3 +156,7 @@ input[type = 'text'] {
     font-family: "Press Start 2P";
 }
 
+=======
+
+}
+>>>>>>> fa7966b (added more css)
