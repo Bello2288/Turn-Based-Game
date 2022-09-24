@@ -8,23 +8,27 @@
     <title>Turn Based Game</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/77f165e855.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <main class="container">
-        <section class="enemy-container">
-            <p class="enemy-name">Countess Morgana</p>
-            <p class="class-description">Witch</p>
-            <img class="char-img" src="images/witch.jpg">
-            <textarea style="resize: none;" id="text-value" class="witch-text-here"
-                placeholder="Countess Morgana was exiled from the kingdom of Lordaeron after succumbing to the forces of dark magic. She now reigns over the Stranglethorn forest."
-                disabled="disabled"></textarea>
+        <section>
+            <section class="enemy-container">
+                <p class="enemy-name">Countess Morgana</p>
+                <p class="class-description">Witch</p>
+                <img class="char-img" src="images/witch.jpg">
+                <textarea style="resize: none;" id="text-value" class="witch-text-here"
+                    placeholder="Countess Morgana was exiled from the kingdom of Lordaeron after succumbing to the forces of dark magic. She now reigns over the Stranglethorn forest."
+                    disabled="disabled"></textarea>
 
-            <ul class="player-abilities">
-                <li><button type="button" class="witchButton1">Arcane Barrage</button></li>
-                <li><button type="button" class="witchButton2">Lightning Bolt</button></li>
-                <li><button type="button" class="witchButton3">Icy Touch</button></li>
-            </ul>
+                <ul class="player-abilities">
+                    <li><button type="button" class="witchButton1">Arcane Barrage</button></li>
+                    <li><button type="button" class="witchButton2">Lightning Bolt</button></li>
+                    <li><button type="button" class="witchButton3">Icy Touch</button></li>
+                </ul>
+            </section>
+            <button class="switch enemy-switch"><i class="fa-solid fa-repeat"></i></button>
         </section>
         <img class="heart" src="images/heart-full.png" alt="">
         <p class="enemy-health">100</p>
@@ -32,19 +36,22 @@
         </p>
         <p class="player-health">100</p>
         <img class="heart" src="images/heart-full.png" alt="">
-        <section class="user-container">
-            <input class="player-name" type="text" class="player-name" placeholder=" Enter Player Name...">
-            <p class="class-description">Knight</p>
-            <img class="char-img" src="images/knight.jpg">
-            <textarea style="resize: none;" id="text-value" class="text-here"
-                placeholder="The knight comes from the Kingdom of Lordaeron. He is renowned for his glorious achievements at the Siege of Black Temple."
-                disabled="disabled"></textarea>
+        <section>
+            <section class="user-container">
+                <input class="player-name" type="text" class="player-name" placeholder=" Enter Player Name...">
+                <p class="class-description">Knight</p>
+                <img class="char-img" src="images/knight.jpg">
+                <textarea style="resize: none;" id="text-value" class="text-here"
+                    placeholder="The knight comes from the Kingdom of Lordaeron. He is renowned for his glorious achievements at the Siege of Black Temple."
+                    disabled="disabled"></textarea>
 
-            <ul class="player-abilities">
-                <li><button type="button" class="knightButton1">Heroic Strike</button></li>
-                <li><button type="button" class="knightButton2">Cleave</button></li>
-                <li><button type="button" class="knightButton3">Headbutt</button></li>
-            </ul>
+                <ul class="player-abilities">
+                    <li><button type="button" class="knightButton1">Heroic Strike</button></li>
+                    <li><button type="button" class="knightButton2">Cleave</button></li>
+                    <li><button type="button" class="knightButton3">Headbutt</button></li>
+                </ul>
+            </section>
+            <button class="switch player-switch"><i class="fa-solid fa-repeat"></i></button>
         </section>
     </main>
 
