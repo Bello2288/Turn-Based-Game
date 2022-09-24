@@ -58,6 +58,10 @@ const knightBtn2 = document.querySelector('.knightButton2');
 	 lorePlaceholder();
  });
 
+
+
+
+ 
  /* === COUNTESS MORGANA WITCH BUTTONS === */
  function witchChangeLore(str) {
     witchLoreText.innerText = str;
