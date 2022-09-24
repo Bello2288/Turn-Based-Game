@@ -125,6 +125,21 @@ body {
     height: 92px;
     width: 373px;
 }
+#text-value, .lore-text {
+    font-size: 11px;
+    text-align: center;
+    margin: 15px 5px;
+    line-height: 1.5;
+    height: 92px;
+    width: 373px;
+    color: goldenrod;
+    font-family: "Press Start 2P";
+    border: none;
+    background: transparent;
+}
+#text-value, .lore-text, ::placeholder {
+    color: goldenrod;
+}
 
 .enemy-health,
 .combat-log,
