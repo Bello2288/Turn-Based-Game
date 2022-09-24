@@ -125,7 +125,9 @@ body {
     height: 92px;
     width: 373px;
 }
-#text-value, .lore-text {
+
+#text-value,
+.lore-text {
     font-size: 11px;
     text-align: center;
     margin: 15px 5px;
@@ -137,7 +139,10 @@ body {
     border: none;
     background: transparent;
 }
-#text-value, .lore-text, ::placeholder {
+
+#text-value,
+.lore-text,
+::placeholder {
     color: goldenrod;
 }
 
@@ -161,12 +166,16 @@ body {
     height: 50px;
     margin-right: 100px;
     margin-left: -50px;
+    transform: translateY(30%);
+    width: 55px;
 }
 
 .player-health {
     height: 50px;
     margin-left: 100px;
     margin-right: -50px;
+    transform: translateY(30%);
+    width: 55px;
 }
 
 .player-name {
@@ -190,5 +199,3 @@ button:active {
 button:hover {
     cursor: pointer;
 }
-
-
