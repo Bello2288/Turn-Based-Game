@@ -74,6 +74,34 @@ body {
 .bolt {
     margin: 0 10px;
 }
+
+.player-abilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 35px;
+    width: 347px;
+    padding: 0;
+    margin: 10px 0;
+}
+.player-abilities li {
+    display: inline-block;
+    padding: 0;
+}
+.player-abilities button {
+    align-items: center;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    height: 35px;
+    width: 105px;
+    background-color: rgb(80, 27, 27);
+    color: goldenrod;
+    font-family: "Press Start 2P";
+    font-size: 10px;
+    padding: 0px;
+}
+
+
 .enemy-name {
     font-size: 18px;
     margin: 10px 0 0 0;
@@ -84,6 +112,8 @@ body {
     text-align: center;
     margin: 15px 5px;
     line-height: 1.5;
+    height: 92px;
+    width: 373px;
 }
 
 .enemy-health,
@@ -112,10 +142,16 @@ body {
 }
 
 .player-name {
- margin-top: 10px;
- text-align: center;
- background-color: transparent;
- color: white;
- font-family: "Player Start 2P";
-
+    margin-top: 10px;
+    text-align: center;
+    background-color: transparent;
+    font-family: "Player Start 2P";
 }
+
+input[type = 'text'] {
+    border: none;
+    font-size: 18px;
+    color: goldenrod;
+    font-family: "Press Start 2P";
+}
+
