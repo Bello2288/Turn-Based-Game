@@ -6,7 +6,7 @@
 
 body {
     background-image: url('images/forest.jpg');
-    background-image: url(https://raw.githubusercontent.com/chawthorne02/Turn-Based-Game/main/images/forest.jpg);
+    cursor: url('images/sword-edit.jpeg'), auto;
 }
 
 .char-img {
@@ -35,6 +35,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: goldenrod;
+
 }
 
 .container {
