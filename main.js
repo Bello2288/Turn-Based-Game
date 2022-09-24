@@ -3,7 +3,7 @@ const playerAttackMed = document.querySelector(".knightButton2");
 const playerAttackWeak = document.querySelector(".knightButton3");
 const enemyCurrentHealth = document.querySelector(".enemy-health");
 const playerCurrentHealth = document.querySelector(".player-health");
-let delayInMilliseconds = 1000;
+let delayInMilliseconds = 2000;
 
 const rng = function randomNumber(min, max) { 
     return Math.round(Math.random() * (max - min) + min);
