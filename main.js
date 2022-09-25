@@ -6,7 +6,7 @@ const playerCurrentHealth = document.querySelector(".player-health");
 let delayInMilliseconds = 1000;
 let grunt = new Audio('grunt.mp3');
 let oof = new Audio('oof.mp3');
-let background = new Audio('background.mp3');
+let background = new Audio('background-edit.mp3');
 background.volume=0.1;
 
 
@@ -31,7 +31,7 @@ function strongAttack(button) {
     }, delayInMilliseconds);
 
     background.play();
-    
+    background.loop=true;
 }
 
 function medAttack(button) {
@@ -45,6 +45,7 @@ function medAttack(button) {
     }, delayInMilliseconds);
 
     background.play();
+    background.loop=true;
            
  }
     
@@ -59,6 +60,7 @@ function medAttack(button) {
     }, delayInMilliseconds);
 
     background.play();
+    background.loop=true;
        
  }
 
