@@ -200,7 +200,7 @@ button:hover {
     cursor: pointer;
 }
 
-.enemy-switch {
+.enemy-switch-hover {
     align-items: center;
     border: 1px solid goldenrod;
     border-radius: 5px;
@@ -212,7 +212,7 @@ button:hover {
     font-size: 10px;
     padding: 0px;
 }
-.player-switch {
+.player-switch-hover {
     align-items: center;
     border: 1px solid goldenrod;
     border-radius: 5px;
