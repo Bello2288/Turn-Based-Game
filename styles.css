@@ -178,18 +178,17 @@ body {
     width: 55px;
 }
 
-.player-name {
-    margin-top: 10px;
+#player-name {
+    margin: 10px 0 0 0;
     text-align: center;
     background-color: transparent;
-    font-family: "Player Start 2P";
-}
-
-input[type='text'] {
     border: none;
+}
+#player-name p {
+    display: flex;
     font-size: 18px;
     color: goldenrod;
-    font-family: "Press Start 2P";
+    font-family: "Player Start 2P";
 }
 
 button:active {

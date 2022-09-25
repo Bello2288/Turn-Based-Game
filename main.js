@@ -206,4 +206,13 @@ playerSelection.addEventListener('change', option => {
 	changeCharacter(selection);
 });
 
+
+setTimeout(function(){
+    let playerName = prompt("Enter character name:");
+if (playerName == '') {
+     prompt("Enter character name:");
+} else if (playerName != '') {
+    document.getElementById("player-name").innerHTML = playerName;}
+}, delayInMilliseconds);
+
 })();
