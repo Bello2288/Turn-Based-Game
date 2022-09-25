@@ -16,12 +16,16 @@ const knightBtn1 = document.querySelector('.knightButton1');
  
  knightBtn1.addEventListener("mouseover", button => {
 	 console.log('mouse over');
-	 changeLore('Heroic Strike: Powerful sword strike, dealing 1d20 damage.');
-	 
+	 //if (knightB1 = 'Heroic Strike');
+	 return changeLore('Heroic Strike: Powerful sword strike, dealing 1d20 damage.');
+	 //else (!knightB1 => )
  });
  
  knightBtn1.addEventListener("mouseout", button => {
+
 	 console.log('mouse out');
+
+
 	 lorePlaceholder();
  });
  /* === KNIGHT BUTTON 2 */
