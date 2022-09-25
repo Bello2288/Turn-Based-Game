@@ -10,6 +10,8 @@ let background = new Audio('background-edit.mp3');
 background.volume=0.1;
 
 
+
+
 const rng = function randomNumber(min, max) { 
     return Math.round(Math.random() * (max - min) + min);
 };
