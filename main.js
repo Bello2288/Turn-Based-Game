@@ -1,3 +1,7 @@
+(function() {
+
+
+
 const playerAttackStrong = document.querySelector(".knightButton1");
 const playerAttackMed = document.querySelector(".knightButton2");
 const playerAttackWeak = document.querySelector(".knightButton3");
@@ -8,7 +12,14 @@ let grunt = new Audio('grunt.mp3');
 let oof = new Audio('oof.mp3');
 let background = new Audio('background-edit.mp3');
 background.volume=0.1;
+let delayForPLayerLoss = 2000;
 
+
+function endGame() {
+    if (parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
+        alert("Game Over! Refresh to start a new game.");
+    } 
+};
 
 
 
@@ -26,16 +37,26 @@ function strongAttack(button) {
 
     enemyCurrentHealth.innerHTML = parseInt(enemyCurrentHealth.innerHTML) - rng(0, 20);
     grunt.play();
+    
        
     setTimeout(function(){
+        if(parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
+            alert("Game Over! Refresh to start a new game.");
+        } else{
         playerCurrentHealth.innerHTML = parseInt(playerCurrentHealth.innerHTML) - rng(0, 20);
         oof.play();
+        }
     }, delayInMilliseconds);
 
     background.play();
     background.loop=true;
-    
-}
+
+    setTimeout(function(){
+        endGame();
+    }, delayForPLayerLoss);
+
+    }
+
 
 function medAttack(button) {
 
@@ -43,14 +64,22 @@ function medAttack(button) {
     grunt.play();
 
     setTimeout(function(){
+        if(parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
+            alert("Game Over! Refresh to start a new game.");
+        } else{
         playerCurrentHealth.innerHTML = parseInt(playerCurrentHealth.innerHTML) - rng(0, 10);
         oof.play();
+        }
     }, delayInMilliseconds);
 
     background.play();
     background.loop=true;
-           
+
+    setTimeout(function(){
+        endGame();
+    }, delayForPLayerLoss);
  }
+
     
  function weakAttack(button) {
 
@@ -58,12 +87,20 @@ function medAttack(button) {
     grunt.play();
 
     setTimeout(function(){
+        if(parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
+            alert("Game Over! Refresh to start a new game.");
+        } else{
         playerCurrentHealth.innerHTML = parseInt(playerCurrentHealth.innerHTML) - (rng(0, 5)-1);
         oof.play();
+        }
     }, delayInMilliseconds);
 
     background.play();
     background.loop=true;
+
+    setTimeout(function(){
+        endGame();
+    }, delayForPLayerLoss);
        
  }
 
@@ -138,6 +175,4 @@ playerSelection.addEventListener('change', option => {
 	changeCharacter(selection);
 });
 
-
-
-
+})();
