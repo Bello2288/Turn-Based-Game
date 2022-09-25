@@ -13,7 +13,29 @@ let oof = new Audio('oof.mp3');
 let background = new Audio('background-edit.mp3');
 background.volume=0.1;
 let delayForPLayerLoss = 2000;
+const enemyImageBlink = [
+    {opacity: '1'},
+    {opacity: '0'},
+    {opacity: '1'},
+ ]
+ const enemyImageTiming = {
+    duration: 500,
+    iterations: 1
+ }
 
+ const enemyImage = document.getElementById('enemy-img')
+
+const playerImage = document.getElementById('player-img')
+
+const playerImageBlink = [
+    {opacity: '1'},
+    {opacity: '0'},
+    {opacity: '1'},
+ ]
+ const playerImageTiming = {
+    duration: 500,
+    iterations: 1
+ }
 
 function endGame() {
     if (parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
@@ -35,6 +57,8 @@ playerAttackWeak.addEventListener('click', weakAttack);
 
 function strongAttack(button) {
 
+    enemyImage.animate(enemyImageBlink, enemyImageTiming);
+
     enemyCurrentHealth.innerHTML = parseInt(enemyCurrentHealth.innerHTML) - rng(0, 20);
     grunt.play();
     
@@ -43,6 +67,7 @@ function strongAttack(button) {
         if(parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
             alert("Game Over! Refresh to start a new game.");
         } else{
+        playerImage.animate(playerImageBlink, playerImageTiming);
         playerCurrentHealth.innerHTML = parseInt(playerCurrentHealth.innerHTML) - rng(0, 20);
         oof.play();
         }
@@ -60,6 +85,8 @@ function strongAttack(button) {
 
 function medAttack(button) {
 
+    enemyImage.animate(enemyImageBlink, enemyImageTiming);
+    
     enemyCurrentHealth.innerHTML = parseInt(enemyCurrentHealth.innerHTML) - rng(0, 10);
     grunt.play();
 
@@ -67,6 +94,7 @@ function medAttack(button) {
         if(parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
             alert("Game Over! Refresh to start a new game.");
         } else{
+        playerImage.animate(playerImageBlink, playerImageTiming);
         playerCurrentHealth.innerHTML = parseInt(playerCurrentHealth.innerHTML) - rng(0, 10);
         oof.play();
         }
@@ -83,6 +111,8 @@ function medAttack(button) {
     
  function weakAttack(button) {
 
+    enemyImage.animate(enemyImageBlink, enemyImageTiming);
+
     enemyCurrentHealth.innerHTML = parseInt(enemyCurrentHealth.innerHTML) - (rng(0, 5)-1);
     grunt.play();
 
@@ -90,6 +120,7 @@ function medAttack(button) {
         if(parseInt(enemyCurrentHealth.innerHTML) <= 0 || parseInt(playerCurrentHealth.innerHTML) <= 0){
             alert("Game Over! Refresh to start a new game.");
         } else{
+        playerImage.animate(playerImageBlink, playerImageTiming);
         playerCurrentHealth.innerHTML = parseInt(playerCurrentHealth.innerHTML) - (rng(0, 5)-1);
         oof.play();
         }
