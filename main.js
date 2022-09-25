@@ -103,10 +103,11 @@ const knightB3 = 'Headbutt';
 
 const mageDesc = 'Battle Mage';
 const mageImg = ("images/battle-mage.jpg");
-const mageText = "Battle mage stuff here";
-const mageB1 = 'Mage Attack 1';
-const mageB2 = 'Mage Attack 2';
-const mageB3 = 'Mage Attack 3';
+const mageText = "The battle mage is a member of the Order of the Eternal. A secret brotherhood of warrior mages.";
+const mageB1 = 'Fire Blast';
+const mageB1Desc = 'Fire Blast: it does some stuff';
+const mageB2 = 'Shield Bash';
+const mageB3 = 'Slash';
 
 function changeCharacter(num){
 	if(num === 0){
