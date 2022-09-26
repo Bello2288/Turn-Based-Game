@@ -89,8 +89,8 @@ const knightBtn2 = document.querySelector('.knightButton2');
     witchLoreText.innerText = str;
 }
 
-function witchLorePlaceholder(){
-	witchLoreText.innerText = '';
+function witchLorePlaceholder(str){
+	witchLoreText.innerText = str;
 };
  
 const witchLoreText = document.querySelector(".witch-text-here");
@@ -101,14 +101,21 @@ const witchBtn1 = document.querySelector('.witchButton1');
  
  witchBtn1.addEventListener("mouseover", button => {
 	 console.log('mouse over');
-	 witchChangeLore('Arcane Barrage: Magical bombardment, dealing 1d20 damage.');
-	 
- });
+	 if (witchBtn1.innerText === witchB1) {
+		witchChangeLore('Arcane Barrage: Magical bombardment, dealing 1d20 damage.');
+		} else if (witchBtn1.innerText === chieftanB1) {
+		   witchChangeLore('Brutalize: The War Chieftan roars with bestial vigor, charging at the enemy, dealing 1d20 damage.')
+		}
+	});
  
  witchBtn1.addEventListener("mouseout", button => {
 	 console.log('mouse out');
-	 witchLorePlaceholder();
- });
+	 if (enemyDescription.innerText === witchDesc) {
+		witchLorePlaceholder(witchText);
+	} else if (enemyDescription.innerText === chieftanDesc) {
+		witchLorePlaceholder(chieftanText);
+	};
+});
  /* === WITCH BUTTON 2 */
 
 const witchBtn2 = document.querySelector('.witchButton2');
@@ -117,14 +124,21 @@ const witchBtn2 = document.querySelector('.witchButton2');
  
  witchBtn2.addEventListener("mouseover", button => {
 	 console.log('mouse over');
-	 witchChangeLore('Lightning Bolt: A bolt of lightning falls from the clouds striking an enemy, dealing 1d10 damage.');
-	 
- });
+	 if (witchBtn2.innerText === witchB2) {
+		witchChangeLore('Lightning Bolt: A bolt of lightning falls from the clouds striking the enemy, dealing 1d10 damage.');
+		} else if (witchBtn2.innerText === chieftanB2) {
+		   witchChangeLore('Pummel: in quick, nimble thrusts, the War Chieftan punches his target, dealing 1d10 damage.')
+		}
+	});
  
  witchBtn2.addEventListener("mouseout", button => {
 	 console.log('mouse out');
-	 witchLorePlaceholder();
- });
+	 if (enemyDescription.innerText === witchDesc) {
+		witchLorePlaceholder(witchText);
+	} else if (enemyDescription.innerText === chieftanDesc) {
+		witchLorePlaceholder(chieftanText);
+	};
+});
 
  /* === WITCH BUTTON 3 */
 
@@ -134,11 +148,19 @@ const witchBtn2 = document.querySelector('.witchButton2');
  
  witchBtn3.addEventListener("mouseover", button => {
 	 console.log('mouse over');
-	 witchChangeLore('Icy Touch: Embracing her icy heart, the witch reaches out towards her enemy, dealing 1d5 + 1 damage.');
-	 
- });
+	
+	 if (witchBtn3.innerText === witchB3) {
+		witchChangeLore('Icy Touch: Embracing her icy heart, the witch reaches out towards her enemy, dealing 1d5 + 1 damage.');
+		} else if (witchBtn3.innerText === chieftanB3) {
+		   witchChangeLore('Backhand: with his free hand, the War Chiefhand swats at his enemy, dealing 1d5 + 1 damage.')
+		}
+	});
  
  witchBtn3.addEventListener("mouseout", button => {
 	 console.log('mouse out');
-	 witchLorePlaceholder();
- });
+	 if (enemyDescription.innerText === witchDesc) {
+		witchLorePlaceholder(witchText);
+	} else if (enemyDescription.innerText === chieftanDesc) {
+		witchLorePlaceholder(chieftanText);
+	};
+});

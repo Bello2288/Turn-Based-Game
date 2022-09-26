@@ -1,4 +1,3 @@
-(function() {
 
 
 
@@ -23,7 +22,7 @@ const enemyImageBlink = [
     iterations: 1
  }
 
- const enemyImage = document.getElementById('enemy-img')
+const enemyImage = document.getElementById('enemy-img')
 
 const playerImage = document.getElementById('player-img')
 
@@ -56,6 +55,8 @@ playerAttackWeak.addEventListener('click', weakAttack);
 
 
 function strongAttack(button) {
+    console.log('strong attack');
+    enemyImage.animate(enemyImageBlink, enemyImageTiming);
 
     enemyImage.animate(enemyImageBlink, enemyImageTiming);
 
@@ -131,7 +132,7 @@ function medAttack(button) {
 
     setTimeout(function(){
         endGame();
-    }, delayForPLayerLoss);
+    }, delayForPlayerLoss);
        
  }
 
@@ -141,7 +142,7 @@ function medAttack(button) {
 
 
 const playerSelection = document.querySelector(".player-switch-hover");
-//const playerOptions = playerSelection.querySelectorAll("option");
+
 var playerDescription = document.getElementById("player-class");
 var playerImg = document.getElementById("player-img");
 var playerText = document.querySelector(".text-here");
@@ -151,6 +152,17 @@ var btn1Text = document.querySelector(".knightButton1");
 var btn2Text = document.querySelector(".knightButton2");
 var btn3Text = document.querySelector(".knightButton3");
 
+
+const enemySelection = document.querySelector(".enemy-switch-hover");
+
+var enemyDescription = document.getElementById("enemyDescription");
+var enemyImg = document.getElementById("enemy-img");
+var enemyText = document.querySelector(".witch-text-here");
+
+
+var btn1EnemyText = document.querySelector(".witchButton1");
+var btn2EnemyText = document.querySelector(".witchButton2");
+var btn3EnemyText = document.querySelector(".witchButton3");
 
 //const playerButtons = document.querySelector(".player-abilities");
 //console.log(playerButtons[0], 'buttons');
@@ -162,20 +174,30 @@ const knightB1 = 'Heroic Strike';
 const knightB2 = 'Cleave';
 const knightB3 = 'Headbutt';
 
-/*                 <ul class="player-abilities">
-                    <li><button type="button" class="knightButton1">Heroic Strike</button></li>
-                    <li><button type="button" class="knightButton2">Cleave</button></li>
-                    <li><button type="button" class="knightButton3">Headbutt</button></li>
-                </ul> */
 
 
 const mageDesc = 'Battle Mage';
 const mageImg = ("images/battle-mage.jpg");
 const mageText = "The battle mage is a member of the Order of the Eternal. A secret brotherhood of warrior mages.";
 const mageB1 = 'Fire Blast';
-const mageB1Desc = 'Fire Blast: it does some stuff';
 const mageB2 = 'Shield Bash';
 const mageB3 = 'Slash';
+
+const witchDesc = 'Witch';
+const witchImg = ("images/witch.jpg");
+const witchText = "Countess Morgana was exiled from the kingdom of Lordaeron after succumbing to the forces of dark magic. She now reigns over the Stranglethorn forest.";
+const witchB1 = 'Arcane Barrage';
+const witchB2 = 'Lightning Bolt';
+const witchB3 = 'Icy Touch';
+
+
+
+const chieftanDesc = 'War Chieftan';
+const chieftanImg = ("images/orc.jpg");
+const chieftanText = "War Chief Bloodfist claimed power by defeating the previous Chieftan in a mak-gora, a bloody duel to the death.";
+const chieftanB1 = 'Brutalize';
+const chieftanB2 = 'Pummel';
+const chieftanB3 = 'Backhand';
 
 function changeCharacter(num){
 	if(num === 0){
@@ -198,7 +220,25 @@ function changeCharacter(num){
 };
 
 
-
+function changeEnemyCharacter(num){
+	if(num === 0){
+		console.log('witch');
+		enemyDescription.innerText = witchDesc;
+		enemyImg.src = witchImg;
+		enemyText.innerText = witchText;
+		btn1EnemyText.innerText = witchB1;
+		btn2EnemyText.innerText = witchB2;
+		btn3EnemyText.innerText = witchB3;
+	}else if (num === 1){
+		console.log('chieftan');
+		enemyDescription.innerText = chieftanDesc;
+		enemyImg.src = chieftanImg;
+		enemyText.innerText = chieftanText;
+		btn1EnemyText.innerText = chieftanB1;
+		btn2EnemyText.innerText = chieftanB2;
+		btn3EnemyText.innerText = chieftanB3;
+	};
+};
 
 playerSelection.addEventListener('change', option => {
 	var selection = playerSelection.selectedIndex;
@@ -206,13 +246,25 @@ playerSelection.addEventListener('change', option => {
 	changeCharacter(selection);
 });
 
+enemySelection.addEventListener('change', option => {
+	var selection = enemySelection.selectedIndex;
+	console.log(selection, 'selection');
+	changeEnemyCharacter(selection);
+});
+window.onload = (event) => {
+ 	let playerName = prompt("Enter character name:");
+	if (playerName == '') {
+		 prompt("Enter character name:");
+	} else if (playerName != '') {
+		document.getElementById("player-name").innerHTML = playerName;
+	};
+};
+/* setTimeout(function(){
+	let playerName = prompt("Enter character name:");
+	if (playerName == '') {
+		 prompt("Enter character name:");
+	} else if (playerName != '') {
+		document.getElementById("player-name").innerHTML = playerName;}
+	}, 0);
 
-setTimeout(function(){
-    let playerName = prompt("Enter character name:");
-if (playerName == '') {
-     prompt("Enter character name:");
-} else if (playerName != '') {
-    document.getElementById("player-name").innerHTML = playerName;}
-}, delayInMilliseconds);
-
-})();
+}); */
